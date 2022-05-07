@@ -17,7 +17,7 @@ export default class Counter extends Component {
           {this.formatCount()}
         </span>
         <button
-          onClick={this.handleIncreament}
+          onClick={() => this.handleIncreament({ id: 1 })}
           className="btn btn-secondary btn-sm"
         >
           Increament
@@ -30,7 +30,8 @@ export default class Counter extends Component {
     );
   }
 
-  handleIncreament = () => {
+  handleIncreament = (id) => {
+    console.log(id);
     this.setState({ count: this.state.count + 1 });
   };
 

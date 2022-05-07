@@ -1,5 +1,11 @@
 import React from "react";
-import { ReactDOM } from "react-dom";
+import ReactRoot from "react-dom";
+import "bootstrap/dist/css/bootstrap.min.css";
+import "bootstrap/dist/js/bootstrap.bundle.min";
+import Counter from "./components/counter";
 
-const element = <h1>Hello World</h1>;
-console.log(element);
+// const container = document.getElementById("root");
+// const root = CreateRoot(container);
+// root.render(<Counter/>);
+
+ReactRoot.render(<Counter/>, document.getElementById("root"));
